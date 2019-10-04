@@ -19,7 +19,7 @@ pipeline {
         }
         stage("Artifact upload"){
           steps{
-              nexusArtifactUploader artifacts: [[artifactId: 'warexample', classifier: '', file: 'pom.xml', type: 'war']], credentialsId: '44c0662e-9030-4882-8aa3-b804b1a41316', groupId: 'hexagon-war.com', nexusUrl: '18.224.155.110:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'devopstraining', version: '0.1'
+              nexusArtifactUploader artifacts: [[artifactId: 'warexample', classifier: '', file: '/var/lib/jenkins/workspace/SampleWar/target/warexample-1.0.war', type: 'war']], credentialsId: '44c0662e-9030-4882-8aa3-b804b1a41316', groupId: 'hexagon-war.com', nexusUrl: '18.224.155.110:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'devopstraining', version: '0.1'
           }
         }
      
